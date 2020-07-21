@@ -24,6 +24,7 @@ Decorator.prototype.removePaint = function(paint) {
 Decorator.prototype.paintRoom = function(room) {
     if (this.canPaintRoom(room) === true) {
         room.painted = true;
+        this.paintLitres -= room.area;
     }
   };
 
