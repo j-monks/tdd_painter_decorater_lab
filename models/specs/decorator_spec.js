@@ -39,4 +39,10 @@ describe("Decorator", function() {
         assert.strictEqual(actual, true);
     });
 
+    it("paint room", function () {
+        decorator.addPaint(paint1);
+        decorator.paintRoom(room);
+        const actual = room.painted;
+        assert.strictEqual(actual, true); 
+    })
 });
