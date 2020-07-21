@@ -15,14 +15,17 @@ Decorator.prototype.canPaintRoom = function(room) {
     return false;
 };
 
+Decorator.prototype.removePaint = function(paint) {
+    if (paint.litres <= this.paintLitres) {
+        this.paintLitres -= paint.litres;
+    }
+}
+
 Decorator.prototype.paintRoom = function(room) {
-  if (this.canPaintRoom(room) === true) {
-      room.painted = true;
-  }
-  return room.painted;
-};
-
-
+    if (this.canPaintRoom(room) === true) {
+        room.painted = true;
+    }
+  };
 
 
 module.exports = Decorator;
